@@ -12,8 +12,7 @@ function MovieDetails({ movie }) {
         <span className="modal__rating">
           Rating: {movie.vote_average * 10}%{' '}
         </span>
-        Release date: {movie.release_date || movie.first_air_date} Runtime:{' '}
-        {movie.runtime || movie.episode_run_time}m
+        Release date: {movie.release_date || movie.first_air_date}
       </p>
       <p className="modal__episode">
         {movie.number_of_episodes
@@ -41,8 +40,6 @@ MovieDetails.propTypes = {
     vote_average: PropTypes.number,
     release_date: PropTypes.string,
     first_air_date: PropTypes.string,
-    runtime: PropTypes.string,
-    episode_run_time: PropTypes.string,
     number_of_episodes: PropTypes.number,
     number_of_seasons: PropTypes.number,
     overview: PropTypes.string,
